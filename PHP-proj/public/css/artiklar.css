@@ -1,0 +1,71 @@
+/** artiklar.css */
+
+/*
+* Positioning
+*/
+.artikel #text{
+    padding-top: 3vh;
+    font-size: 1.5em;
+}
+
+/*
+* Styling links
+*/
+.artikel a {
+    font-style: italic;
+    font-size: .9em;
+    text-decoration: none;
+}
+
+.artikel a:hover {
+    text-decoration: underline;
+}
+
+/*
+* Data for article from database
+*/
+.artikel-data h2, h3 {
+    padding-top: 1vh;
+}
+
+.artikel-data p {
+    padding-top: 1vh;
+}
+
+.artikel-data blockquote {
+    font-style: italic;
+    font-size: .9em;
+    padding: 1.2em;
+}
+
+.artikel-data img {
+    text-align: center;
+    width: 100%;
+}
+
+.artikel-data li {
+    padding-left: 2rem;
+}
+
+/*
+* Images in article
+*/
+.artikel-img {
+    text-align: center;
+
+}
+
+.artikel-img img {
+    width: 100%;
+    padding-top: 2vh;
+}
+
+/*
+* Line between articles
+*/
+.line {
+    border-bottom: solid;
+    width: 100%;
+    height: 20px;
+    color: #638458;
+}

@@ -1,0 +1,25 @@
+/** gallery.css */
+
+/*
+* Positioning of images in gallery. Swipe-function
+*/
+.galleri {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+/*
+* Margin between images in gallery
+*/
+.galleri-box {
+    margin-right: 1vw;
+}
+
+/*
+* Size of images in gallery
+*/
+.galleri-box img {
+    height: 250px;
+}
