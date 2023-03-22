@@ -1,0 +1,31 @@
+<%- include("./../partials/header.ejs") %>
+    <article>
+        <h1>Sök ....</h1>
+        <form>
+            <input type="text" name="searchword"><br>
+            <input type="submit" name="doit" value="Sök">
+        </form>
+        <% if (locals.filtered) { %>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Namn</th>
+                <th>Pris</th>
+                <th>Beskrivning</th>
+                <th>Antal</th>
+                <th>Kategorier</th>
+            </tr>
+            <% for (const product of filtered) { %>
+                <tr>
+                    <td><%= product.id %></td>
+                    <td><%= product.name %></td>
+                    <td><%= product.price %>kr</td>
+                    <td><%= product.description %></td>
+                    <td><%= product.quantity %></td>
+                    <td><%= product.categories %></td>
+                </tr>
+            <% } %>
+        </table>
+        <% } %>
+    </article>
+<%- include("./../partials/footer.ejs") %>

@@ -1,0 +1,17 @@
+<%- include("./../partials/header.ejs") %>
+    <article>
+        <h1>Uppdatera produkt</h1>
+        <h2>Uppdaterar <%= one.name %></h2>
+        <form method="POST" action="/update">
+            <label>Id:</label><br>
+            <input type="text" name="p_id" value="<%= one.id %>" readonly><br>
+            <label>Namn:</label><br>
+            <input type="text" name="p_name" value="<%= one.name %>"><br>
+            <label>Pris:</label><br>
+            <input type="number" name="p_price" value="<%= one.price %>"><br>
+            <label>Beskrivning:</label><br>
+            <input type="text" name="p_description" value="<%= one.description %>"><br>
+            <input type="submit" name="doit" value="Uppdatera">
+        </form>
+    </article>
+<%- include("./../partials/footer.ejs") %>

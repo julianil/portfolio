@@ -1,0 +1,16 @@
+<%- include("./../partials/header.ejs") %>
+    <article>
+        <h1>Account balance</h1>
+        <table>
+            <tr>
+                <th>Kategorier</th>
+            </tr>
+            <% for (const row of all) { %>
+                <tr>
+                    <td><%= row.category_name %></td>
+                </tr>
+            <% } %>
+            </tr>
+        </table>
+    </article>
+<%- include("./../partials/footer.ejs") %>

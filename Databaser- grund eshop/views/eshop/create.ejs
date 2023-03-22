@@ -1,0 +1,15 @@
+<%- include("./../partials/header.ejs") %>
+    <article>
+        <h1>Ny produkt</h1>
+        <h2>Skapa en ny produkt</h2>
+        <form method="POST">
+            <label>Namn:</label><br>
+            <input type="text" name="p_name"><br>
+            <label>Pris:</label><br>
+            <input type="number" name="p_price"><br>
+            <label>Beskrivning:</label><br>
+            <input type="text" name="p_description"><br>
+            <input type="submit" name="doit" value="Skapa">
+        </form>
+    </article>
+<%- include("./../partials/footer.ejs") %>

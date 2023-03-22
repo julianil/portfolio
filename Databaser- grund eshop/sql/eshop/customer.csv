@@ -1,0 +1,6 @@
+"id","firstname","lastname","address","zip_code","city","country","email","phonenumber",\n
+"1","Mikael","Roos","Centrumgatan 1","56400","Bankeryd","Sverige","mikael.roos@gmail.com","0704224242",\n
+"2","John","Doe","Skogen 1","55555","Landet","Sverige","john_d@gmail.com","0705555525",\n
+"3","Jane","Doe","Skogen 1","55555","Landet","Sverige","jane_d@gmail.com","0705565536",\n
+"4","Mumintrollet","Mumin","Blå hus 1","11111","Mumindalen","Finland","mumin@outlook.com","0701111151",\n
+"5","Anders","Andersson","Gladagatan 3","44443","Haparanda","Sverige","a.andersson@hotmail.com","0734565321",\n

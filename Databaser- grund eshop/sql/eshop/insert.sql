@@ -1,0 +1,72 @@
+DELETE FROM `storage_shelf`;
+DELETE FROM `category`;
+DELETE FROM `product`;
+DELETE FROM `product_category`;
+DELETE FROM `customer`;
+DELETE FROM `storage`;
+
+LOAD DATA LOCAL INFILE 'storage.csv'
+INTO TABLE `storage`
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+LOAD DATA LOCAL INFILE 'customer.csv'
+INTO TABLE `customer`
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+LOAD DATA LOCAL INFILE 'category.csv'
+INTO TABLE `product_category`
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+LOAD DATA LOCAL INFILE 'product.csv'
+INTO TABLE `product`
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+LOAD DATA LOCAL INFILE 'product2category.csv'
+INTO TABLE `category`
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+LOAD DATA LOCAL INFILE 'storage_shelf.csv'
+INTO TABLE `storage_shelf`
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;

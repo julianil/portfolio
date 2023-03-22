@@ -1,0 +1,32 @@
+<%- include("./../partials/header.ejs") %>
+    <article>
+        <h1>Alla produkter</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Namn</th>
+                <th>Pris</th>
+                <th>Beskrivning</th>
+                <th>Antal</th>
+                <th>Kategorier</th>
+                <th>Ändra</th>
+            </tr>
+            <% for (const row of all) { %>
+                <tr>
+                    <td><%= row.id %></td>
+                    <td><%= row.name %></td>
+                    <td><%= row.price %>kr</td>
+                    <td><%= row.description %></td>
+                    <td><%= row.quantity %></td>
+                    <td><%= row.categories %></td>
+                    <td>
+                        <a href="/update/<%= row.id %>">Uppdatera</a> |
+                        <a href="/delete/<%= row.id %>">Radera</a>
+                    </td>
+                </tr>
+            <% } %>
+            </tr>
+        </table>
+        <h3><a href="/create">Lägg till produkt</a></h3>
+    </article>
+<%- include("./../partials/footer.ejs") %>

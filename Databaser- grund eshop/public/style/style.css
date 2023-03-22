@@ -1,0 +1,118 @@
+html {
+    margin: 0;
+	padding: 0;
+	border: 0;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(251, 251, 238);
+    margin: 0 auto;
+}
+
+article {
+    height: 70vh;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+    padding-top: 1em;
+}
+
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: #2b1b0f;
+}
+
+footer p {
+    font-size: 1.2rem;
+    color: white;
+    padding: 2.5em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #111;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2b1b0f;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+}
+
+input[type=text], input[type=number], select {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+input[type=submit] {
+    width: 300px;
+    background-color: #2b1b0f;
+    color: white;
+    padding: 14px 20px;
+    margin: 14px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #6b5340;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+a:hover{
+    color: #6b5340;
+}

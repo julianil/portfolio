@@ -1,0 +1,17 @@
+<%- include("./../partials/header.ejs") %>
+    <article>
+        <h1>Radera produkt</h1>
+        <h2>Är du säker på att du vill radera <%= one.name %>?</h2>
+        <form method="POST" action="/delete">
+            <label>Id:</label><br>
+            <input type="text" name="p_id" value="<%= one.id %>" readonly><br>
+            <label>Namn:</label><br>
+            <input type="text" name="p_name" value="<%= one.name %>" readonly><br>
+            <label>Pris:</label><br>
+            <input type="number" name="p_price" value="<%= one.price %>" readonly><br>
+            <label>Beskrivning:</label><br>
+            <input type="text" name="p_description" value="<%= one.description %>" readonly><br>
+            <input type="submit" name="doit" value="Radera">
+        </form>
+    </article>
+<%- include("./../partials/footer.ejs") %>
