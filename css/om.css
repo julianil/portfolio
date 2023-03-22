@@ -1,0 +1,69 @@
+/** om.css */
+
+/*
+* Two column layout for om-page
+*/
+.column-layout {
+    display: flex;
+}
+
+/*
+* Positioning of data about company, left column
+*/
+.info-company {
+    width: 60%;
+    padding-right: 2.5rem;
+}
+
+.info-company p {
+    padding-bottom: 1rem;
+}
+
+.info-company h2 {
+    padding-bottom: .2rem;
+}
+
+/*
+* Positioning of image and text about me, right column
+*/
+.info-me {
+    width: 40%;
+    padding-top: 5vh;
+}
+
+.info-me img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.info-me p {
+    padding-top: 1.5rem;
+}
+
+.info-me a {
+    font-style: italic;
+    text-decoration: none;
+}
+
+.info-me a:hover {
+    text-decoration: underline;
+}
+
+/* 
+* Responsive layout- makes one row with information instead of two
+*/
+@media screen and (max-width: 600px) {
+    .column-layout {
+        display: contents;
+        margin: auto;
+    }
+
+    .info-me {
+        width: 100%;
+    }
+
+    .info-company {
+        width: 100%;
+        padding-right: 0;
+    }
+}

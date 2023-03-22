@@ -1,0 +1,99 @@
+/** object.css */
+
+/*
+* Styling of links in article and object
+*/
+.byline {
+    font-style: italic;
+    font-size: .9em;
+}
+
+.byline a {
+    text-decoration: none;
+}
+
+.byline a:hover {
+    text-decoration: underline;
+}
+
+/*
+* Flex-container with all objects
+*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.box {
+    flex: 32%;
+    padding: 0.5rem;
+}
+
+.box img {
+    margin-top: 0.2rem;
+    width: 100%;
+}
+
+.box-caption {
+    line-height: 1.5rem;
+}
+
+.box-caption a {
+    font-style: italic;
+    text-decoration: none;
+}
+
+.box-caption a:hover {
+    text-decoration: underline;
+}
+
+/* 
+* Responsive layout- makes two rows with objects instead of three
+*/
+@media screen and (max-width: 800px) {
+    .box {
+        flex: 49%;
+        max-width: 49%;
+    }
+}
+
+/* 
+* Responsive layout- makes one row with objects instead of two
+*/
+@media screen and (max-width: 600px) {
+    .box {
+    flex: 100%;
+    max-width: 100%;
+    }
+}
+
+/*
+* Data for object from database
+*/
+.objekt img {
+    padding-top: 2vh;
+}
+
+.objekt-data h2{
+    padding-top: 2.5vh;
+}
+
+.objekt-data p{
+    padding-top: 1vh;
+}
+
+.objekt-data blockquote{
+    font-style: italic;
+    font-size: .9em;
+    padding: 1.2em;
+}
+
+.objekt-img {
+    text-align: center;
+}
+
+.objekt-img img {
+    width: 100%;
+}

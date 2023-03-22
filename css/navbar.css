@@ -1,0 +1,62 @@
+/** navbar.css */
+
+/*
+* Colors, fonts and positioning of elements in navbar
+*/
+.navbar {
+    background-color: #005200;
+    font-size: 1.2em;
+}
+
+.nav-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+.nav-links li {
+    list-style: none;
+    background-color: #005200;
+}
+
+.nav-links li:hover {
+    background-color: #638458;
+}
+
+.nav-links li a {
+    color: #FFFAEB;
+    padding: 1rem;
+    display: block;
+}
+
+.nav-links a {
+    font-family: 'Lato', sans-serif;
+}
+
+/* 
+* Responsive layout- fontsize and padding elements in navbar
+*/
+@media screen and (max-width: 800px) {
+    .navbar {
+        font-size: 1.1em;
+    }
+
+    .nav-links ul{
+        justify-content: space-around;
+    }
+}
+
+/* 
+* Responsive layout- Make two rows of elements in navbar not one
+*/
+@media screen and (max-width: 600px) {
+    .nav-links ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .nav-links li {
+    padding: 0rem 0.5rem;
+    }
+}
