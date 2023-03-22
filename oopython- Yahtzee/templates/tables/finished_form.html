@@ -1,0 +1,6 @@
+<form role="form" method="POST" action="{{ url_for('leader_new') }}">
+    <label>Enter your name here to save your score!</label><br>
+    <input type="text" name="name"><br>
+    <input type="text" id="score" name="score" value="{{winner[0]}}" style="display:None;"><br>
+    <button type="submit" class="btn btn-success btn-lg btn-block">Save</button>
+</form>

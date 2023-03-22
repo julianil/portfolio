@@ -1,0 +1,49 @@
+{% include 'header.html' %}
+<div class="container" role="main">
+    <div class="jumbotron">
+        <h1>It's Yahtzee time!</h1>
+    </div>
+    {% if scoreboard.finished() %}
+        <div class="rowmarketing">
+            <h2>Woho you finished the game!!</h2>
+            <h2>The winner was {{ winner[1] }} with a totalscore of {{ winner[0] }}</h2>
+            <ol>
+                {% for x in list_of_players %}
+                    <li>{{ x[1] }}, {{ x[0] }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+        {% include 'tables/finished_form.html' %}
+    {% endif %}
+    {% if not scoreboard.finished() %}
+        <div class="row">
+            <div class="col-md-6">
+                <form role="form" method="POST" action="{{ url_for('reroll') }}">
+                    <h3>Die roll</h3>
+                    <p>You have made {{ count }} throws</p>
+                        <div class="dices">
+                        {% for dice in hand.dice %}
+                            <div>
+                                <img src="{{ url_for('static', filename='img/' + dice.get_name() + '.png')}}">
+                                <div class="checkbox">
+                                    <input type="checkbox" name="dice" value="{{ loop.index0 }}">
+                                </div>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    <br><button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2>{{ player }}</h2>
+                <h3>Score: {{ scoreboard.get_total_points() }}</h3>
+                {% if message %}
+                    <div class="warning rowmarketing">{{ message }}</div>
+                {% endif %}
+                {% include 'tables/scoreboard.html' %}
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+{% include 'footer.html' %}

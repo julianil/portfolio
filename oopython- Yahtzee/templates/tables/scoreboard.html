@@ -1,0 +1,24 @@
+<form role="form" method="POST" action="{{ url_for('score') }}">
+<table class="table">
+    <thead>
+        <tr>
+            <th>Choose</th>
+            <th>Worth</th>
+            <th>Rule</th>
+            <th>Already scored</th>
+        </tr>
+    </thead>
+<tbody>
+    {% for rule in scoreboard.RULES %}
+        <tr>
+            <td><input type="radio" id="{{ rule.name }}" name="score" value="{{ rule.name }}">
+                <label></label><br></td>
+            <td>{{ rule.points(hand) }}</td>
+            <td>{{ rule.name }}</td>
+            <td>{{ scoreboard.get_points(rule.name) }}</td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+<button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+</form>

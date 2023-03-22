@@ -1,0 +1,18 @@
+{% include 'header.html' %}
+
+<div class="container" role="main">
+    <div class="container" style="min-height:20em">
+        <div class="jumbotron">
+            <h1>Welcome to Yahtzee!</h1>
+        </div>
+        <div class="row">
+            <form method="POST" action="{{ url_for('init') }}">
+                <label>Choose number of players</label>
+                <input type="number" name="amount_players">
+                <input type="submit" value="Starta spelet!" class="btn btn-success btn-lg btn-block">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% include 'footer.html' %}

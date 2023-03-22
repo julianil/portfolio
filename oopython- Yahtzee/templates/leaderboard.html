@@ -1,0 +1,33 @@
+{% include 'header.html' %}
+
+<div class="container" role="main">
+    <div class="container" style="min-height:20em">
+        <div class="jumbotron">
+            <h1>Yahtzee leaderboard!</h1>
+        </div>
+        <h2>Här finns alla tidigare spel sparade, för nuvarande är det {{ leaderboard.entries.size() }} stycken.</h2>
+        <form role="form" method="POST" action="{{ url_for('leader_remove') }}">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Score</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+            <tbody>
+                {% for player in range(leaderboard.entries.size()) %}
+                    <tr>
+                        <td>{{ leaderboard.entries.get(player)[1] }}</td>
+                        <td>{{ leaderboard.entries.get(player)[0] }}</td>
+                        <td><input type="radio" name="player" value="{{ loop.index0 }}"></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+            <button type="submit" class="btn btn-success btn-lg btn-block">Delete</button>
+        </form>
+    </div>
+</div>
+
+{% include 'footer.html' %}
