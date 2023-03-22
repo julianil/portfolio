@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Intelligenstest- projekt</title>
+   <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div class="userInfo">
+   <h2>SCORE</h2>
+      <div id="totalScore">
+         <h2>0</h2>
+      </div>
+   <h2>TIMER</h2>
+      <div id="totalTime">
+         <h2>0</h2>
+      </div>
+</div>
+<div class="testContent">
+   <div class="info" id="testInfo">
+      <h2>Välkommen till Intelligenstestet!</h2>
+      <p>Hej och välkommen till detta intelligenstest! Testet består av 4 delar som testar ditt minne, 
+         den kunskap inom allemansrätten, din förmåga att se mönster och din visuell förmåga i kombination 
+         med läsförståelse! I varje deltest kan du samla ex antal poäng som tillsammans utgör din totalpoäng, 
+         din intelligens. Innan varje test får du en kort beskrivning av hur testet går till och du väljer 
+         själv när du vill starta. Vissa tester går på tid, andra inte, detta framgår i beskrivningen. 
+         När du känner dig redo är det bara att köra igång. Lycka till!</p>
+   </div>
+   <div class ="container" id="test">
+      <button class="button" id="startButton">Starta</button>
+   </div>
+   <div id="svarAlt"></div>
+</div>
+<script src="dist/bundle.js"></script>
+</body>
+<script>
+function reset() {
+   location.reload();
+   console.log("Page reloaded")
+};
+</script>
+</html>
