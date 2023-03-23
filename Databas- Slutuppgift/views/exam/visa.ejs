@@ -1,0 +1,53 @@
+<%- include("./../partials/header.ejs") %>
+    <article>
+        <h2>Alla kraftverk</h2>
+        <p>TIPS! Klicka på kraftverkens namn för att lära dig ännu mer.</p>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Namn</th>
+                <th>Plats</th>
+                <th>Källa</th>
+                <th>Effekt</th>
+                <th>Nyttjandegrad</th>
+                <th>Startad</th>
+                <th>Stängd</th>
+                <th>Typ</th>
+            </tr>
+            <% for (const row of powerplants) { %>
+                <tr>
+                    <td><%= row.id %></td>
+                    <td><a href="<%= row.url %>"><%= row.name %></a></td>
+                    <td><%= row.location %></td>
+                    <td><%= row.source %></td>
+                    <td><%= row.output %></td>
+                    <td><%= row.utilization_rate %></td>
+                    <td><%= row.launch %></td>
+                    <td><%= row.closed %></td>
+                    <td><%= row.type %></td>
+                </tr>
+            <% } %>
+            </tr>
+        </table>
+        <h2>Alla konsumenter</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Namn</th>
+                <th>Ort</th>
+                <th>Årsbehov</th>
+                <th>Källtyp</th>
+            </tr>
+            <% for (const row of customers) { %>
+                <tr>
+                    <td><%= row.id %></td>
+                    <td><%= row.name %></td>
+                    <td><%= row.state %></td>
+                    <td><%= row.annual_consumption %></td>
+                    <td><%= row.powersource %></td>
+                </tr>
+            <% } %>
+            </tr>
+        </table>
+    </article>
+<%- include("./../partials/footer.ejs") %>

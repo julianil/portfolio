@@ -1,0 +1,59 @@
+<%- include("./../partials/header.ejs") %>
+    <article>
+        <h1>Sök ....</h1>
+        <form>
+            <input type="text" name="searchword"><br>
+            <input type="submit" name="doit" value="Sök">
+        </form>
+        <% if (locals.filteredP) { %>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Namn</th>
+                    <th>Plats</th>
+                    <th>Källa</th>
+                    <th>Effekt</th>
+                    <th>Nyttjandegrad</th>
+                    <th>Startad</th>
+                    <th>Stängd</th>
+                    <th>Typ</th>
+                </tr>
+                <% for (const row of filteredP) { %>
+                    <tr>
+                        <td><%= row.id %></td>
+                        <td><a href="<%= row.url %>"><%= row.name %></a></td>
+                        <td><%= row.location %></td>
+                        <td><%= row.source %></td>
+                        <td><%= row.output %></td>
+                        <td><%= row.utilization_rate %></td>
+                        <td><%= row.launch %></td>
+                        <td><%= row.closed %></td>
+                        <td><%= row.type %></td>
+                    </tr>
+                <% } %>
+                </tr>
+            </table>
+        <% } %>
+        <% if (locals.filteredC) { %>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Namn</th>
+                    <th>Ort</th>
+                    <th>Årsbehov</th>
+                    <th>Källtyp</th>
+                </tr>
+                <% for (const row of filteredC) { %>
+                    <tr>
+                        <td><%= row.id %></td>
+                        <td><%= row.name %></td>
+                        <td><%= row.state %></td>
+                        <td><%= row.annual_consumption %></td>
+                        <td><%= row.powersource %></td>
+                    </tr>
+                <% } %>
+                </tr>
+            </table>
+        <% } %>
+    </article>
+<%- include("./../partials/footer.ejs") %>
